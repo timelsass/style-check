@@ -139,7 +139,7 @@ function runLints() {
   const
     spawn = require( 'child_process' ).spawnSync,
     runLints = spawn( 'awk', [
-      '-f', './lib/run-lints',
+      '-f', 'run-lints',
       stylesheet
     ]);
     console.log( `${runLints.stderr.toString()}` );
