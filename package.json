@@ -1,0 +1,32 @@
+{
+  "name": "style-check",
+  "version": "1.0.0",
+  "description": "Stylesheet linting and fixing.",
+  "main": "style-check.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "style-check": "./style-check.js"
+  },
+  "author": "Tim Elsass",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "autoprefixer": "^6.6.0",
+    "clear": "0.0.1",
+    "csscomb": "^3.1.7",
+    "dateformat": "^2.0.0",
+    "inquirer": "^2.0.0",
+    "postcss": "^5.2.8",
+    "postcss-cli": "^2.6.0",
+    "postcss-csscomb": "^1.0.2",
+    "postcss-font-weights": "^3.0.1",
+    "postcss-merge-longhand": "^2.0.1",
+    "postcss-normalize-url": "^3.0.8",
+    "postcss-pseudo-element-cases": "^1.0.0",
+    "postcss-pseudo-element-colons": "^1.0.0",
+    "simple-git": "^1.65.0",
+    "stylelint": "^7.7.0",
+    "stylelint-config-wordpress": "^9.1.1"
+  }
+}

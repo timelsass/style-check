@@ -1,0 +1,7 @@
+{
+	"local-plugins": true,
+    "autoprefixer": {
+        "browsers": "> 5% in US",
+        "cascade": false
+    }
+}

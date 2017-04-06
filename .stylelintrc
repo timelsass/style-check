@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-wordpress",
+  "rules": {
+    "indentation": "tab",
+    "max-line-length": null,
+    "rule-non-nested-empty-line-before": null,
+    "rule-nested-empty-line-before": null,
+    "selector-pseudo-element-colon-notation": "double",
+    "comment-empty-line-before": [ "always", {
+        except: [
+            "first-nested"
+        ]
+    }]
+  }
+}
