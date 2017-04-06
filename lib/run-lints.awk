@@ -164,7 +164,7 @@ function runCSScomb() {
 
 function runPrefixLint() {
 
-    cmd = "postcss --use autoprefixer -r --config " varDir "/.autoprefix.json " FILENAME;
+    cmd = "postcss --use autoprefixer -r --no-map --config " varDir "/.autoprefix.json " FILENAME;
     styleErrors=0;
 
     while ( ( cmd | getline ) > 0 ) {
