@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "style-check": "./style-check.js",
-    "run-lints": "./lib/run-lints.awk"
+    "style-check": "./style-check.js"
   },
   "author": "Tim Elsass",
   "license": "GPL-2.0",
