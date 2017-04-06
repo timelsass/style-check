@@ -39,7 +39,7 @@ function setLinters() {
 
 function runStylelint() {
 
-    cmd = "stylelint --config " varDir "/.stylelintrc " runDir "/" FILENAME;
+    cmd = "stylelint --config " varDir "/.stylelintrc " FILENAME;
     styleErrors=0;
 
     while ( ( cmd | getline ) > 0 ) {
@@ -65,7 +65,7 @@ function runStylelint() {
 
 function runCSScomb() {
 
-    cmd = "csscomb --config " varDir "/.csscomb.json " runDir "/" FILENAME;
+    cmd = "csscomb --config " varDir "/.csscomb.json " FILENAME;
     statusCount=0;
 
     # CSSComb generates unusable output, so we can just call it since we
@@ -80,7 +80,7 @@ function runCSScomb() {
     # Print section header.
     printHeader( "CSScomb Errors" );
 
-    cmd = "cd $(dirname " FILENAME "); git diff " runDir "/" FILENAME;
+    cmd = "cd $(dirname " FILENAME "); git diff " FILENAME;
 
     while ( ( cmd | getline ) > 0 ) {
 
@@ -183,7 +183,7 @@ function runPrefixLint() {
     styleErrors=0;
 
     # Run a git diff to check for modifications and format the output.
-    cmd = "cd $(dirname " FILENAME "); git diff --unified=0 " runDir "/" FILENAME;
+    cmd = "cd $(dirname " FILENAME "); git diff --unified=0 " FILENAME;
 
     while ( ( cmd | getline ) > 0 ) {
 
