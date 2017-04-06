@@ -139,8 +139,9 @@ function runLints() {
   const
     spawn = require( 'child_process' ).spawnSync,
     runLints = spawn( 'awk', [
-      '-f', 'run-lints',
-      stylesheet
+      '-v', 'scriptLocation=' + __dirname,
+      '-f', __dirname + '/lib/run-lints',
+      process.cwd() + '/' + stylesheet
     ]);
     console.log( `${runLints.stderr.toString()}` );
     console.log( `${runLints.stdout.toString()}` );
